@@ -1,0 +1,17 @@
+{
+  "amazon": "YOUR_AMAZON_TRACKING_ID",
+  "shareasale": {
+    "notion": "YOUR_SHAREASALE_NOTION_LINK",
+    "zoom": "YOUR_SHAREASALE_ZOOM_LINK",
+    "logitech": "YOUR_SHAREASALE_LOGITECH_LINK",
+    "flexispot": "YOUR_SHAREASALE_FLEXISPOT_LINK",
+    "benq": "YOUR_SHAREASALE_BENQ_LINK",
+    "toggl": "YOUR_SHAREASALE_TOGGL_LINK",
+    "clockwise": "YOUR_SHAREASALE_CLOCKWISE_LINK",
+    "gather": "YOUR_SHAREASALE_GATHER_LINK",
+    "whereby": "YOUR_SHAREASALE_WHEREBY_LINK",
+    "slack": "YOUR_SHAREASALE_SLACK_LINK"
+  },
+  "convertkit": "YOUR_CONVERTKIT_FORM_URL",
+  "googleAnalytics": "G-XXXXXXXXXX"
+}

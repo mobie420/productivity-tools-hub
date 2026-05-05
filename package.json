@@ -1,0 +1,18 @@
+{
+  "name": "productivity-tools-hub",
+  "version": "1.0.0",
+  "description": "Zero‑cost affiliate site for productivity tools",
+  "scripts": {
+    "build": "node build-final.js",
+    "dev": "live-server .",
+    "deploy:github": "echo 'Follow GitHub Pages instructions in README'",
+    "replace-links": "node replace-affiliate-links.js"
+  },
+  "devDependencies": {
+    "marked": "^14.1.0",
+    "fs-extra": "^11.2.0"
+  },
+  "keywords": ["affiliate", "productivity", "static-site"],
+  "author": "ClawOS",
+  "license": "MIT"
+}

@@ -1,0 +1,157 @@
+/* Custom styles for Productivity Tools Hub */
+
+:root {
+    --primary: #1d4ed8;
+    --primary-light: #3b82f6;
+    --secondary: #10b981;
+    --dark: #1f2937;
+    --light: #f9f9f9;
+    --gray: #6b7280;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+/* Article cards */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.article-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+.article-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.article-card p {
+    color: var(--dark);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.article-card small {
+    display: block;
+    margin-top: 1rem;
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.cta h2 {
+    border: none;
+    color: white;
+}
+
+.cta a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Affiliate note */
+.affiliate-note {
+    background: #f0f7ff;
+    border-left: 4px solid var(--primary);
+    padding: 1.25rem;
+    margin: 2.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.affiliate-disclaimer {
+    font-size: 0.9rem;
+    color: var(--gray);
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+/* Newsletter form */
+form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: var(--primary-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+    form {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+}
