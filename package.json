@@ -9,10 +9,14 @@
     "replace-links": "node replace-affiliate-links.js"
   },
   "devDependencies": {
-    "marked": "^14.1.0",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.3.4",
+    "marked": "^14.1.4"
   },
-  "keywords": ["affiliate", "productivity", "static-site"],
+  "keywords": [
+    "affiliate",
+    "productivity",
+    "static-site"
+  ],
   "author": "ClawOS",
   "license": "MIT"
 }
