@@ -1,0 +1,31 @@
+name: Weekly Article Scheduler
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at 00:00 UTC
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  publish-article:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies (if any)
+        run: npm ci --only=production || echo 'No package.json'
+
+      - name: Run scheduler
+        run: node update-scheduler.js
+
+      - name: Deploy to GitHub Pages (if changed)
+        uses: peaceiris/actions-gh-pages@v3
+        if: success()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./articles  # adjust as needed
+          publish_branch: main
