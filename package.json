@@ -7,7 +7,6 @@
   "dependencies": {
     "marked": "^6.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=20.12.0"
   }
