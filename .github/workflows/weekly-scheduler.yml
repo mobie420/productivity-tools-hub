@@ -17,7 +17,7 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies (if any)
-        run: npm ci --only=production || echo 'No package.json'
+        run: npm install || echo 'No package.json'
 
       - name: Run scheduler
         run: node update-scheduler.js
