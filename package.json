@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {},
   "dependencies": {
-    "marked": "^6.0.0"
+    "marked": "^14.1.4"
   },
   "engines": {
     "node": ">=20.12.0"
