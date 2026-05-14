@@ -29,7 +29,7 @@ const N = 5;
 const articlesToProcess = cachedFiles.slice(0, N);
 console.log(`? Processing ${articlesToProcess.length} articles`);
 for (const article of articlesToProcess) {
-    const article = cachedFiles[0];
+    // const article = cachedFiles[0]; // removed duplicate declaration
     console.log(`???? Next article to publish: ${article}`);
     
     // 3. Move it to articles-md/
