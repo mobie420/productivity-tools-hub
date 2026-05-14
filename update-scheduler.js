@@ -29,23 +29,29 @@ const N = 5;
 const articlesToProcess = cachedFiles.slice(0, N);
 console.log(`ð Processing ${articlesToProcess.length} articles`);
 for (const nextArticle of articlesToProcess) {
-    const nextArticle = cachedFiles[0];
-    console.log(`Ã°ÂÂÂ Next article to publish: ${nextArticle}`);
-    
-    // 3. Move it to articles-md/
+
+// Process first N articles (max 5)
+const N = 5;
+const articlesToProcess = cachedFiles.slice(0, N);
+console.log(`🚀 Processing ${articlesToProcess.length} articles`);
+for (const nextArticle of articlesToProcess) {
+    // Check if source file still exists
     const sourcePath = path.join(ARTICLES_CACHE_DIR, nextArticle);
+    if (!fs.existsSync(sourcePath)) {
+        console.warn(`⚠️  ${nextArticle} already moved, skipping`);
+        continue;
+    }
+    console.log(`📝 Next article to publish: ${nextArticle}`);
+    // Move it to articles-md/
     const destPath = path.join(ARTICLES_MD_DIR, nextArticle);
-    
     fs.copyFileSync(sourcePath, destPath);
-    console.log(`Ã¢ÂÂ Copied to ${destPath}`);
-    
-    // 4. Delete from cache (or move to archive)
-    const archiveDir = path.join(__dirname, 'articles-archive');
+    console.log(`✅ Copied to ${destPath}`);
+    // Delete from cache (or move to archive)
+    const archiveDir = path.join(__dirname, "articles-archive");
     if (!fs.existsSync(archiveDir)) fs.mkdirSync(archiveDir, { recursive: true });
     fs.copyFileSync(sourcePath, path.join(archiveDir, nextArticle));
     fs.unlinkSync(sourcePath);
-    console.log(`Ã°ÂÂÂ¦ Archived and removed from cache`);
-    
+    console.log(`📦 Archived and removed from cache`);
 }
 
 // 5. Run build scripts
@@ -88,5 +94,5 @@ if (gitRemote.includes('github.com')) {
 }
 
 console.log('\nÃ°ÂÂÂ Update complete!');
-console.log(`Ã°ÂÂÂ ${cachedFiles.length - 1} articles remaining in cache`);
+console.log(`📈 ${cachedFiles.length - articlesToProcess.length} articles remaining in cache`);
 console.log(`Ã°ÂÂÂ Next update scheduled for next week`);
