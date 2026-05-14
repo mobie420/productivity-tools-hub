@@ -10,8 +10,13 @@
     "clockwise": "YOUR_SHAREASALE_CLOCKWISE_LINK",
     "gather": "YOUR_SHAREASALE_GATHER_LINK",
     "whereby": "YOUR_SHAREASALE_WHEREBY_LINK",
-    "slack": "YOUR_SHAREASALE_SLACK_LINK"
+    "slack": "YOUR_SHAREASALE_SLACK_LINK",
+    "__note": "Replace YOUR_SHAREASALE_* links with your actual affiliate links from ShareASale.com"
   },
   "convertkit": "YOUR_CONVERTKIT_FORM_URL",
-  "googleAnalytics": "G-XXXXXXXXXX"
+  "googleAnalytics": "G-XXXXXXXXXX",
+  "cj": {
+    "__note": "Add your CJ.com affiliate links (sign up at https://www.cj.com)",
+    "example_product": "YOUR_CJ_PRODUCT_LINK"
+  }
 }
