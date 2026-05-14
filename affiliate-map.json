@@ -11,12 +11,14 @@
     "gather": "YOUR_SHAREASALE_GATHER_LINK",
     "whereby": "YOUR_SHAREASALE_WHEREBY_LINK",
     "slack": "YOUR_SHAREASALE_SLACK_LINK",
-    "__note": "Replace YOUR_SHAREASALE_* links with your actual affiliate links from ShareASale.com"
+    "__note": "Sign up at https://www.shareasale.com and replace placeholder links with your affiliate links"
   },
   "convertkit": "YOUR_CONVERTKIT_FORM_URL",
-  "googleAnalytics": "G-XXXXXXXXXX",
+  "googleAnalytics": "G-XXXXXXXXXX // Replace with your GA4 Measurement ID from https://analytics.google.com",
   "cj": {
     "__note": "Add your CJ.com affiliate links (sign up at https://www.cj.com)",
     "example_product": "YOUR_CJ_PRODUCT_LINK"
-  }
+  },
+  "amazon_note": "Amazon Associates tag: productivi002-20 (already set)",
+  "__instructions": "Replace placeholder values with your actual affiliate IDs. Refer to AFFILIATE_SETUP.md for guidance."
 }
